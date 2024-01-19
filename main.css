@@ -9,6 +9,13 @@
       0 0 512px #FF8131;
 }
 
+:root {
+	--smellyButts: 30px; /*use with var(--smellyButts)*/
+	--cubeSize: 43vw;
+	--cubeXpos: 19vw;
+	--shelfYpos: 0.7;
+}
+
 html {
 	overflow: hidden;
 	
@@ -77,13 +84,15 @@ h2 {
 }
 
 .contentCube {
+	/*border: 3px solid cyan;*/
 	position: absolute;
 	margin: 0px;
 	display: flex;
 	align-items: center;
 	justify-content: center;
-	/*border: 3px solid cyan;*/
-	width: 800px;
+	width: var(--cubeSize);
+	max-width: 800px;
+	/*width: 800px;*/
 	height: 1080px;
 	background-image: url(eru-contentcube-glow.png);
 	background-size: 100%;
@@ -93,9 +102,16 @@ h2 {
 	
 }
 
-.spacedOut {
-	padding: 20px 30px;
+.cubeShelf {
+	/*border: 3px solid orange;*/
+	align-items: center;
+	width: 61.25vw;
+	display: flex;
 	position: absolute;
-	top: 0;
-	left: 0;
+	top: 568px;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	display: flex;
+	justify-content: center;
+	align-items: center;
 }
